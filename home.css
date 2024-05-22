@@ -1,0 +1,220 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#main {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: rgb(163, 163, 163);
+}
+
+#nav {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#nav img {
+    height: 50px;
+    margin-left: 40px;
+    margin-right: 150px; 
+}
+
+#nav-prt1 {
+    display: flex;
+    align-items: center;
+}
+
+#nav-prt1 h4 {
+    margin-right: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#nav-prt1 h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 0%; 
+    height: 3px;
+    background-color: red;
+    transition: width 0.4s; 
+}
+
+#nav-prt1 h4:hover::after {
+    width: 50%; 
+}
+
+#nav-prt2 {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+#nav-prt2 i {
+    font-size: 24px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+#nav-prt2 i:hover {
+    color: #ca4444;
+} 
+
+#content {
+    height: calc(100% - 70px); 
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+#left {
+    height: 100%;
+    width: 35%;
+  padding: 70px 90px;
+}
+#left h5{
+    font-size: 15px;
+    margin-bottom: -15px;
+}
+#left h1{
+    text-transform: uppercase;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 0px;
+}
+
+#left p{
+    width: 420px;
+    margin-bottom: 40px;
+}
+#left button{
+    background-color: rgb(127, 3, 3);
+    color: white;
+    font-weight: bolder;
+    width: 150px;
+    padding: 10px 24px;
+    border-radius: 40px;
+    border-top-left-radius: 0;
+}
+#right {
+    height: 100%;
+    width: 65%;
+    
+    position: relative;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+#right::-webkit-scrollbar{
+    display: none;
+}
+#elem{
+height: 350px;
+width: 250px;
+background-color: white;
+position: absolute;
+top: 13%;
+left: 13%;
+position: relative;
+margin-right: 30px;
+box-shadow: 0 5px 10 px rgb(0, 0, 0);
+border-radius: 10px;
+display: inline-block;
+}
+#elem img{
+    position: absolute;
+    height: 70%;
+    width: 100%; 
+}
+#elem h4{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 15px;
+    background-color: rgb(165, 149, 149);
+    padding: 12px 24px;
+    margin-bottom: 0;
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+#elem h5{
+    position: absolute;
+    bottom: 5.5%;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 12px 24px;
+    
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    
+}
+
+@media screen and (max-width: 768px) {
+    #nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav img {
+        margin: 10px 0;
+    }
+
+    #nav-prt1 {
+        margin-right: 20px;
+    }
+
+    #nav-prt1 h4 {
+        margin: 5px 20px;
+    }
+
+    #nav-prt2 {
+        margin-left: 20px;
+    }
+
+    #nav-prt2 i {
+        margin: 0 10px;
+    }
+
+    #left {
+        padding: 40px; 
+    }
+
+    #left h1 {
+        font-size: 40px; 
+        line-height: 50px; 
+    }
+
+    #left p {
+        width: 100%; 
+    }
+
+    #left button {
+        width: 100%; 
+    }
+
+    #right {
+        width: 100%; 
+    }
+
+    #elem {
+        height: 300px; 
+        width: 200px; 
+        margin-right: 20px; 
+    }
+
+    #elem h4,
+    #elem h5 {
+        padding: 8px 16px;
+    }
+}
